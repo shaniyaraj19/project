@@ -228,7 +228,7 @@ export default function Contact() {
             <div className="space-y-10">
               <motion.div variants={textReveal}>
                 <h2 className="text-base font-medium text-white mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">Visit us</h2>
-                <p className="font-light">263 Homebush Road<br />Strathfield South 2136</p>
+                <p className="font-light">OMR Road,<br />Chennai</p>
               </motion.div>
 
               <motion.div variants={textReveal}>

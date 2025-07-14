@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion,useAnimation, useInView } from 'framer-motion';
 import { usePageTransition } from '../components/PageTransition';
 
 const fadeIn = {
@@ -407,6 +407,7 @@ export default function Pricing() {
           </SplitText>
         </motion.h2>
         <div className="flex flex-col md:flex-row justify-center gap-4">
+          <Link to ="/start-free-trial">
           <motion.button 
             className="bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-gray-800 px-10 py-3 rounded-full text-sm font-medium border border-gray-200 transition-all duration-300 hover:shadow-lg hover:shadow-white/5"
             variants={scaleUp}
@@ -419,6 +420,8 @@ export default function Pricing() {
           >
             Start Free Trial
           </motion.button>
+          </Link>
+          <Link to= "schedule-demo">
           <motion.button 
             className="border border-white/30 text-white px-10 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10"
             variants={scaleUp}
@@ -431,6 +434,7 @@ export default function Pricing() {
           >
             Talk to Sales
           </motion.button>
+          </Link>
         </div>
       </motion.div>
     </div>

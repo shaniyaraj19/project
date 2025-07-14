@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { MdCampaign } from 'react-icons/md';
 import { FaLaptopCode, FaHardHat, FaUserTie } from 'react-icons/fa';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import {Link} from 'react-router-dom';
 
 const container = {
   hidden: { opacity: 0, y: 24 },
@@ -1923,6 +1924,7 @@ export default function UseCases() {
             Ready to transform your workflow?
           </SplitText>
         </motion.h2>
+        <Link to ="start-free-trial">
         <motion.button 
           className="bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-gray-800 px-10 py-3 rounded-full text-sm font-medium border border-gray-200 transition-all duration-300 hover:shadow-lg hover:shadow-white/5"
           variants={scaleUp}
@@ -1935,7 +1937,450 @@ export default function UseCases() {
         >
           Start Free Trial
         </motion.button>
+        </Link>
       </motion.section>
     </div>
   );
 }
+
+
+// import React, { useEffect, useRef } from 'react';
+// import { MdCampaign } from 'react-icons/md';
+// import { FaLaptopCode, FaHardHat, FaUserTie } from 'react-icons/fa';
+// import { motion, useAnimation, useInView } from 'framer-motion';
+// import {Link} from 'react-router-dom';
+
+// const container = {
+//   hidden: { opacity: 0, y: 24 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: 0.1,
+//       duration: 0.6,
+//       type: 'spring',
+//       when: 'beforeChildren',
+//     },
+//   },
+// };
+
+// const fadeIn = {
+//   hidden: { opacity: 0, y: 30 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.6, ease: 'easeOut' }
+//   }
+// };
+
+// const textReveal = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { 
+//       duration: 0.8, 
+//       ease: [0.2, 0.65, 0.3, 0.9] 
+//     }
+//   }
+// };
+
+// const letterAnimation = {
+//   hidden: { opacity: 0, y: 50 },
+//   visible: i => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: i * 0.04,
+//       duration: 0.6,
+//       ease: [0.2, 0.65, 0.3, 0.9]
+//     }
+//   })
+// };
+
+// const staggerContainer = {
+//   hidden: {},
+//   visible: {
+//     transition: {
+//       staggerChildren: 0.1
+//     }
+//   }
+// };
+
+// const scaleUp = {
+//   hidden: { opacity: 0, scale: 0.95 },
+//   visible: {
+//     opacity: 1,
+//     scale: 1,
+//     transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }
+//   }
+// };
+
+// const card = {
+//   hidden: { opacity: 0, y: 24 },
+//   visible: (i = 1) => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: { delay: i * 0.1, duration: 0.6, type: 'spring' },
+//   }),
+// };
+
+// const boxReveal = {
+//   hidden: { 
+//     opacity: 0, 
+//     scale: 0.9,
+//     boxShadow: "0px 0px 0px rgba(255,255,255,0)"
+//   },
+//   visible: {
+//     opacity: 1,
+//     scale: 1,
+//     boxShadow: "0px 10px 30px -10px rgba(255,255,255,0.1)",
+//     transition: { 
+//       duration: 0.7, 
+//       ease: [0.25, 0.1, 0.25, 1.0] 
+//     }
+//   },
+//   hover: {
+//     y: -5,
+//     boxShadow: "0px 15px 30px -10px rgba(255,255,255,0.15)",
+//     transition: { duration: 0.3 }
+//   }
+// };
+
+// const SplitText = ({ children, className }) => {
+//   return (
+//     <span className={className}>
+//       {children.split(" ").map((word, wordIndex) => (
+//         <span key={wordIndex} className="inline-block overflow-hidden mr-[0.15em]">
+//           <motion.span
+//             className="inline-block"
+//             custom={wordIndex}
+//             variants={{
+//               hidden: { y: "100%" },
+//               visible: i => ({
+//                 y: 0,
+//                 transition: {
+//                   delay: i * 0.1,
+//                   duration: 0.6,
+//                   ease: [0.2, 0.65, 0.3, 0.9]
+//                 }
+//               })
+//             }}
+//           >
+//             {word}{wordIndex !== children.split(" ").length - 1 ? "\u00A0" : ""}
+//           </motion.span>
+//         </span>
+//       ))}
+//     </span>
+//   );
+// };
+
+// const useCases = [
+//   {
+//     title: 'Marketing Teams',
+//     icon: <MdCampaign size={48} className="mb-4 text-gray-100" />,
+//     desc: 'Plan campaigns, track content production, and delight clients with on-time delivery and clear status updates.',
+//   },
+//   {
+//     title: 'IT & Software Teams',
+//     icon: <FaLaptopCode size={40} className="mb-4 text-gray-100" />,
+//     desc: 'Manage sprints, releases, and bug fixes with clarity and speed using boards and timelines.',
+//   },
+//   {
+//     title: 'Construction Projects',
+//     icon: <FaHardHat size={48} className="mb-4 text-gray-100" />,
+//     desc: 'Monitor budgets, contractors, and site schedules. Hit milestones with confidence using Gantt charts and reports.',
+//   },
+//   {
+//     title: 'Freelancers & Consultants',
+//     icon: <FaUserTie size={48} className="mb-4 text-gray-100" />,
+//     desc: 'Keep deliverables and timelines crystal clear. Share progress and results with clients in one place.',
+//   },
+// ];
+
+// const MarketingInfographic = () => (
+//   <div className="mt-4 opacity-70">
+//     <motion.svg 
+//       width="100%" 
+//       height="180" 
+//       viewBox="0 0 300 180" 
+//       fill="none" 
+//       xmlns="http://www.w3.org/2000/svg"
+//       initial={{ opacity: 0, y: 10 }}
+//       animate={{ opacity: 0.7, y: 0 }}
+//       transition={{ duration: 1, delay: 0.5 }}
+//     >
+//       {/* ...existing SVG code... */}
+//     </motion.svg>
+//   </div>
+// );
+
+// const ITSoftwareInfographic = () => (
+//   <div className="mt-4 opacity-70">
+//     <motion.svg 
+//       width="100%" 
+//       height="150" 
+//       viewBox="0 0 300 150" 
+//       fill="none" 
+//       xmlns="http://www.w3.org/2000/svg"
+//       initial={{ opacity: 0, y: 10 }}
+//       animate={{ opacity: 0.7, y: 0 }}
+//       transition={{ duration: 1, delay: 0.5 }}
+//     >
+//       {/* ...existing SVG code... */}
+//       {/* Fix for animated circles: always provide a valid initial cx and height */}
+//       <motion.g>
+//         <motion.circle 
+//           cx={180} 
+//           cy={70} 
+//           r={1} 
+//           fill="rgba(255,255,255,0.3)"
+//           initial={{ cx: 180 }}
+//           animate={{ 
+//             cx: [180, 190, 200], 
+//             opacity: [0.3, 0.5, 0.3] 
+//           }}
+//           transition={{ 
+//             duration: 3, 
+//             repeat: Infinity, 
+//             repeatType: "loop", 
+//             delay: 2.5 
+//           }}
+//         />
+//         <motion.circle 
+//           cx={200} 
+//           cy={65} 
+//           r={1} 
+//           fill="rgba(255,255,255,0.3)"
+//           initial={{ cx: 200 }}
+//           animate={{ 
+//             cx: [200, 190, 180], 
+//             opacity: [0.3, 0.5, 0.3] 
+//           }}
+//           transition={{ 
+//             duration: 4, 
+//             repeat: Infinity, 
+//             repeatType: "loop", 
+//             delay: 3 
+//           }}
+//         />
+//       </motion.g>
+//       {/* ...existing SVG code... */}
+//       {/* Fix for chart bars: always provide initial height */}
+//       <motion.rect 
+//         x={165} 
+//         y={115} 
+//         width={4} 
+//         height={0} 
+//         fill="rgba(255,255,255,0.15)"
+//         animate={{ height: 5 }}
+//         transition={{ duration: 0.5, delay: 2.2 }}
+//       />
+//       <motion.rect 
+//         x={172} 
+//         y={115} 
+//         width={4} 
+//         height={0} 
+//         fill="rgba(255,255,255,0.15)"
+//         animate={{ height: 8 }}
+//         transition={{ duration: 0.5, delay: 2.3 }}
+//       />
+//       <motion.rect 
+//         x={179} 
+//         y={115} 
+//         width={4} 
+//         height={0} 
+//         fill="rgba(255,255,255,0.15)"
+//         animate={{ height: 3 }}
+//         transition={{ duration: 0.5, delay: 2.4 }}
+//       />
+//       <motion.rect 
+//         x={186} 
+//         y={115} 
+//         width={4} 
+//         height={0} 
+//         fill="rgba(255,255,255,0.15)"
+//         animate={{ height: 7 }}
+//         transition={{ duration: 0.5, delay: 2.5 }}
+//       />
+//       <motion.rect 
+//         x={193} 
+//         y={115} 
+//         width={4} 
+//         height={0} 
+//         fill="rgba(255,255,255,0.15)"
+//         animate={{ height: 4 }}
+//         transition={{ duration: 0.5, delay: 2.6 }}
+//       />
+//       {/* ...existing SVG code... */}
+//     </motion.svg>
+//   </div>
+// );
+
+// const ConstructionInfographic = () => (
+//   <div className="mt-4 opacity-70">
+//     <motion.svg 
+//       width="100%" 
+//       height="180" 
+//       viewBox="0 0 300 180" 
+//       fill="none" 
+//       xmlns="http://www.w3.org/2000/svg"
+//       initial={{ opacity: 0, y: 10 }}
+//       animate={{ opacity: 0.7, y: 0 }}
+//       transition={{ duration: 1, delay: 0.5 }}
+//     >
+//       {/* ...existing SVG code... */}
+//     </motion.svg>
+//   </div>
+// );
+
+// const FreelancerInfographic = () => (
+//   <div className="mt-4 opacity-70">
+//     <motion.svg 
+//       width="100%" 
+//       height="180" 
+//       viewBox="0 0 300 180" 
+//       fill="none" 
+//       xmlns="http://www.w3.org/2000/svg"
+//       initial={{ opacity: 0, y: 10 }}
+//       animate={{ opacity: 0.7, y: 0 }}
+//       transition={{ duration: 1, delay: 0.5 }}
+//     >
+//       {/* ...existing SVG code... */}
+//     </motion.svg>
+//   </div>
+// );
+
+// export default function UseCases() {
+//   const useCasesRef = useRef(null);
+//   const useCasesInView = useInView(useCasesRef, { once: true, margin: "-100px" });
+//   const useCasesControls = useAnimation();
+  
+//   useEffect(() => {
+//     if (useCasesInView) {
+//       useCasesControls.start("visible");
+//     }
+//   }, [useCasesInView, useCasesControls]);
+
+//   return (
+//     <div className="relative bg-black text-white overflow-hidden">
+//       <motion.section 
+//         className="py-16 px-4 text-center"
+//         variants={fadeIn}
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true }}
+//       >
+//         <motion.h1 
+//           className="text-4xl md:text-5xl font-light mb-6 tracking-tight"
+//           variants={staggerContainer}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//         >
+//           <SplitText className="bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">
+//             Solutions for Every
+//           </SplitText>
+//           <br />
+//           <SplitText className="font-medium bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">
+//             Industry & Team
+//           </SplitText>
+//         </motion.h1>
+//         <motion.p 
+//           className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
+//           variants={textReveal}
+//         >
+//           From marketing to construction, ProjectAccel adapts to your workflow with customized tools for your unique challenges.
+//         </motion.p>
+//       </motion.section>
+
+//       <motion.section 
+//         ref={useCasesRef}
+//         className="py-8 max-w-5xl mx-auto"
+//         variants={container}
+//         initial="hidden"
+//         animate={useCasesControls}
+//         viewport={{ once: true, margin: "-100px" }}
+//       >
+//         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 px-4">
+//           {useCases.map((uc, i) => (
+//             <motion.div 
+//               key={i}
+//               className={`p-8 rounded-xl border border-white/10 backdrop-blur-sm bg-gradient-to-b from-white/[0.05] to-transparent transition-all duration-300 hover:shadow-lg hover:shadow-white/5 ${
+//                 i === 0 ? 'md:col-span-2 md:row-span-1 md:min-h-[300px]' : 
+//                 i === 1 ? 'md:col-span-1 md:row-span-1 md:min-h-[300px]' : 
+//                 i === 2 ? 'md:col-span-1 md:row-span-1 md:min-h-[300px]' : 
+//                 'md:col-span-2 md:row-span-1 md:min-h-[300px]'
+//               }`}
+//               variants={boxReveal}
+//               whileHover="hover"
+//             >
+//               <motion.div 
+//                 className="mb-4"
+//                 animate={{ 
+//                   y: [0, -5, 0], 
+//                   filter: ["drop-shadow(0px 0px 0px rgba(255,255,255,0.0))", "drop-shadow(0px 10px 10px rgba(255,255,255,0.2))", "drop-shadow(0px 0px 0px rgba(255,255,255,0.0))"],
+//                 }}
+//                 transition={{ 
+//                   repeat: Infinity, 
+//                   duration: 2.5, 
+//                   ease: "easeInOut",
+//                   delay: i * 0.2
+//                 }}
+//               >
+//                 {uc.icon}
+//               </motion.div>
+//               <motion.h2 
+//                 className="text-xl font-medium leading-snug bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent mb-3"
+//                 variants={textReveal}
+//               >
+//                 {uc.title}
+//               </motion.h2>
+//               <motion.p 
+//                 className="text-md text-gray-300 font-light"
+//                 variants={textReveal}
+//               >
+//                 {uc.desc}
+//               </motion.p>
+//               {i === 0 && <MarketingInfographic />}
+//               {i === 1 && <ITSoftwareInfographic />}
+//               {i === 2 && <ConstructionInfographic />}
+//               {i === 3 && <FreelancerInfographic />}
+//             </motion.div>
+//           ))}
+//         </div>
+//       </motion.section>
+
+//       <motion.section
+//         className="text-center mt-16 mb-16"
+//         variants={fadeIn}
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true }}
+//       >
+//         <motion.h2 
+//           className="text-2xl md:text-3xl font-light mb-8"
+//           variants={textReveal}
+//         >
+//           <SplitText className="bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">
+//             Ready to transform your workflow?
+//           </SplitText>
+//         </motion.h2>
+//         <Link to ="start-free-trial">
+//         <motion.button 
+//           className="bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-gray-800 px-10 py-3 rounded-full text-sm font-medium border border-gray-200 transition-all duration-300 hover:shadow-lg hover:shadow-white/5"
+//           variants={scaleUp}
+//           whileHover={{ 
+//             scale: 1.05,
+//             boxShadow: "0px 10px 20px -5px rgba(255,255,255,0.15)",
+//             transition: { duration: 0.2 }
+//           }}
+//           whileTap={{ scale: 0.98 }}
+//         >
+//           Start Free Trial
+//         </motion.button>
+//         </Link>
+//       </motion.section>
+//     </div>
+//   );
+// }

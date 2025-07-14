@@ -144,7 +144,7 @@ function Footer() {
         { name: "Features", href: "/features" },
         { name: "Pricing", href: "/pricing" },
         { name: "Use Cases", href: "/use-cases" },
-        { name: "Integrations", href: "/integrations" },
+        // { name: "Integrations", href: "/integrations" },
       ]
     },
     {
@@ -158,7 +158,7 @@ function Footer() {
     {
       title: "Support",
       links: [
-        { name: "Contact Us", href: "/contact" },
+        // { name: "Contact Us", href: "/contact" },
         { name: "Privacy Policy", href: "/privacy" },
         { name: "Terms of Service", href: "/terms" },
         { name: "Security", href: "/security" },

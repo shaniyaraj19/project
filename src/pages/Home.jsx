@@ -459,6 +459,7 @@ export default function Home() {
             </SplitText>
           </motion.h2>
           
+          <Link to ="/start-free-trial">
           <motion.button 
             variants={scaleUp}
             className="bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-gray-800 px-10 py-3 rounded-full text-sm font-medium border border-gray-200 transition-all duration-300 hover:shadow-lg hover:shadow-white/5"
@@ -471,6 +472,7 @@ export default function Home() {
           >
             Try Free for 14 Days
           </motion.button>
+          </Link>
           
           <motion.p 
             variants={textReveal}
