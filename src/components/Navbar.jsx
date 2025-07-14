@@ -90,8 +90,8 @@ function Navbar() {
         
         <div ref={logoRef} className="flex items-center">
           <NavLink to="/" className="flex items-center space-x-3 group">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-md shadow-indigo-500/10 group-hover:shadow-lg group-hover:shadow-indigo-500/20 transition-all duration-300">
-              <span className="text-white font-medium text-base">P</span>
+            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-700 to-white text-white border border-white/20">
+            <span className="font-medium text-sm">P</span>
             </div>
             <div className="text-lg font-light text-white tracking-wide">
               Project<span className="font-medium">Accel</span>
