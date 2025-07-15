@@ -136,7 +136,7 @@ export default function Contact() {
           animate={headerControls}
         >
           <motion.h1 
-            className="text-5xl md:text-6xl font-light mb-8 tracking-tight"
+            className="text-6xl md:text-8xl font-light mb-8 leading-tight tracking-tight"
             variants={staggerContainer}
           >
             <SplitText className="bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">

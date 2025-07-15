@@ -90,8 +90,8 @@ function Navbar() {
         
         <div ref={logoRef} className="flex items-center">
           <NavLink to="/" className="flex items-center space-x-3 group">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-700 to-white text-white border border-white/20">
-            <span className="font-medium text-sm">P</span>
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-r  from-gray-300 text-gray-800 flex items-center justify-center ">
+            <span className="text-white font-bold text-lg">P</span>
             </div>
             <div className="text-lg font-light text-white tracking-wide">
               Project<span className="font-medium">Accel</span>
@@ -121,6 +121,12 @@ function Navbar() {
                 <span className={`absolute -bottom-1 left-0 w-full h-px bg-white transform origin-left transition-transform duration-300 ${({ isActive }) => isActive ? 'scale-x-100' : 'scale-x-0'}`}></span>
               </span>
             </NavLink>
+            {/* <NavLink to="/case-studies" className={navLinkClass}>
+              <span className="relative">
+                case studies
+                <span className={`absolute -bottom-1 left-0 w-full h-px bg-white transform origin-left transition-transform duration-300 ${({ isActive }) => isActive ? 'scale-x-100' : 'scale-x-0'}`}></span>
+              </span>
+            </NavLink> */}
             <NavLink to="/pricing" className={navLinkClass}>
               <span className="relative">
                 Pricing
@@ -143,9 +149,11 @@ function Navbar() {
 
 
           <div ref={ctaRef} className="hidden lg:block">
+            <Link to ="/start-free-trial">
             <button className="bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-gray-800 px-5 py-1.5 rounded-full text-sm font-medium border border-gray-200 transition-all duration-300 hover:shadow-lg hover:shadow-white/5">
               Start Free Trial
             </button>
+            </Link>
           </div>
 
           

@@ -405,10 +405,14 @@ export default function About() {
         viewport={{ once: true }}
         className="text-center space-y-8 max-w-4xl mx-auto"
       >
-        <motion.h1 className="text-6xl md:text-7xl font-light leading-tight tracking-tight">
+        <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light mb-6 md:mb-8 leading-tight tracking-tight">
           <SplitText className="bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent">
-            About ProjectAccel
+            About 
           </SplitText>
+          <SplitText className="bg-gradient-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent">
+           ProjectAccel
+          </SplitText>
+
         </motion.h1>
 
         <motion.p

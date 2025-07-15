@@ -1830,7 +1830,7 @@ export default function UseCases() {
         viewport={{ once: true }}
       >
         <motion.h1 
-          className="text-4xl md:text-5xl font-light mb-6 tracking-tight"
+          className="text-6xl md:text-8xl font-light mb-8 leading-tight tracking-tight"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
